@@ -31,9 +31,10 @@ spec:
         - name: config
           mountPath: /data
         resources:
+          requests:
+            memory: 8Gi
           limits:
-            cpu: "0.1"
-            memory: 128Mi
+            memory: 8Gi
       containers:
         - name: codesearch
           image: ghcr.io/hound-search/hound:latest
